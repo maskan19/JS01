@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+table {
+	text-align: center;
+	width: auto;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+tr:FIRST-CHILD {
+	background: lightskyblue;
+}
+
+td {
+	height: auto;
+	padding: 10px;
+	text-align: center;
+}
+
+#names {
+	width: 200px;
+}
+
+#details {
+	width: 500px;
+}
+
+tr:hover {
+	background: #bbdefb;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+</style>
+
+<script>
+$(function() {
+    $.ajax({
+       url : '/prod/ProdList',
+       type : 'get',
+       success : function(res) {
+    	   code = `<table  onfocus="this.blur()"><tr>
+    	   <td>id</td>
+    	   <td>name</td>
+    	   <td>lgu</td>
+    	   <td>buyer</td>
+    	   <td>cost</td>
+    	   <td>price</td>
+    	   <td>sale</td>
+    	   <td>outline</td>
+    	   <td>detail</td>
+    	   <td>img</td>
+    	   <td>totalstock</td>
+    	   <td>insdate</td>
+    	   <td>properstock</td>
+    	   <td>size</td>
+    	   <td>color</td>
+    	   <td>delivery</td>
+    	   <td>unit</td>
+    	   <td>qtyin</td>
+    	   <td>qtysale</td>
+    	   </tr>
+    	   `;
+           $.each(res, function(i, v) {
+              code += `
+            <tr><td>${v.id}</td>             
+            <td>${v.name}</td>         
+            <td>${v.lgu}</td>           
+            <td>${v.buyer}</td>       
+            <td>${v.cost}</td>         
+            <td>${v.price}</td>       
+            <td>${v.sale}</td>         
+            <td>${v.outline}</td>   
+            <td>${v.detail}</td>     
+            <td>${v.img}</td>           
+            <td>${v.totalsto}</td> 
+            <td>${v.insdate}</td>   
+            <td>${v.properst}</td> 
+            <td>${v.size}</td>         
+            <td>${v.color}</td>       
+            <td>${v.delivery}</td> 
+            <td>${v.unit}</td>         
+            <td>${v.qtyin}</td>       
+            <td>${v.qtysale}</td>`;
+              
+           })
+           code +=`</table>`;
+           $("#result1").html(code);
+      },
+      error : function(xhr) {
+         alert("상태 : " + xhr.status);
+      },
+      dataType : 'json'
+    })
+})
+</script>
+</head>
+<body>
+<a href="naver.com"><input type ="button" value ="버튼" style="width:75px; height: 35px; font-size: 18px;
+line-height: 35px; text-align: center; background-color:transparent;" ></a>
+	<div class="box noselect">
+
+		<br>
+		<!-- <br> <input type="button" value="확인 "> -->
+
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

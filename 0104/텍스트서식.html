@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset= "UTF-8">
+	<title></title>
+	<link rel = "stylesheet" href = "../CSS/public.css">
+	<style>
+		#bpre{
+			background-color : #E2FDB9;
+			width : 400px;
+		}
+		<!-- 
+		#은 아이디
+		여러개를 동시에 선택할 때는 콤마로 구분
+		backgroud color중 color는 생략이 가능하다-->
+		em, strong, sub, sup{
+			background : #e3a5f1;
+			width : 400px;
+			height : 500px;
+		}
+		span{
+			font-weight : bold;
+			font-style : italic;
+		}
+		p{
+			background : blue;
+			color : white;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+	블럭 요소 : 한줄 전체를 차지, 크기를 지정할 수 있다.
+	인라인 요소 : 지정한 영역을 차지, 크기를 지정할 수 없다.
+	가로 길이 지정 : width
+	세로 길이 지정 : height
+	
+	p태그 : 하나의 단락을 지정
+	span : 단락 안에서 일부분의 문자를 지정
+	hr : 구분선. 구분선 안에 내용이 없을 때는 닫지 않는다.
+	&amp;nbsp; : 공백&lt;pre&gt;외에서 사용
+	&amp;lt; <
+	&amp;gt; >
+	&amp; &
+	
+	</pre>
+	<hr color = "green">
+	<h3> 진달래꽃 :      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       김소월</h3>
+	<pre id = "bpre">
+나보기가 역겨워
+가실ᄯᅢ에는
+말업시 고히 <sup>보내</sup>드리우리다
+
+寧邊에藥山
+<mark>진달내ᄭᅩᆺ</mark>
+아름ᄯᅡ다 가실길에 <em>ᄲᅮ리우리다</em>
+
+가시는<sub>거름거름</sub>
+노힌그ᄭᅩᆺ츨
+삽분히즈려밟고 가시옵소서
+
+나보기가 역겨워
+가실ᄯᅢ에는
+<strong>죽어도아니 눈물흘니우리다</strong>
+나 보기가 역겨워
+가실 &&때에는
+말없이 고이 보내 드리우리다
+
+영변에 약산
+진달래꽃
+<p>아름 따다 가실 <span>길에</span> 뿌리우리다</p>
+
+가시는 걸음 걸음
+놓인 그 꽃을
+<span>사뿐히</span> 즈려밟고 가시옵소서
+
+나 보기가 역겨워
+가실 때에는
+죽어도 아니 눈물 흘리우리다
+</pre>
+</body>
+</html>

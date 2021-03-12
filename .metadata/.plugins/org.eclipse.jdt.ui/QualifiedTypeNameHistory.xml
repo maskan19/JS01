@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.annotation.Resources"/>
+<fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
+<fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+<fullyQualifiedTypeName name="kr.or.ddit.dao.DaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.dao.IDaoSample"/>
+<fullyQualifiedTypeName name="kr.or.ddit.service.IServiceSample"/>
+<fullyQualifiedTypeName name="kr.or.ddit.service.ServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.LprodDaoImpl"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.LprodServiceImpl"/>
+<fullyQualifiedTypeName name="com.ibatis.common.io.ReaderInputStream"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.dao.IProdDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.service.ProdServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.service.IProdService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.IMemberDao"/>
+<fullyQualifiedTypeName name="org.apache.catalina.tribes.MembershipService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.IMemberService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="org.apache.catalina.tribes.membership.MemberImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemberVO"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="kr.or.ddit.ibatis.config.SqlMapClientFactory"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.dao.BoardDaoImpl"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.vo.ReplyVO"/>
+</qualifiedTypeNameHistroy>

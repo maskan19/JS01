@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+<script>
+'use strict'
+//lprod테이블의 데이터 조회 
+$(function(){
+   $('input').on('click',()=>{
+      $.ajax({
+         url : '../0203/lprod.jsp',
+         /* type : 'get',
+         data : '', */
+         success : function(res){
+            let code ="";
+            $.each(res,function(i,v){
+               code += `<option value = '${v.gu}'>${v.nm}</option>`;
+            })
+            
+            $('#Lprod').html(code);
+            $('#Lprod').trigger('change');
+            
+         },
+         error : function(xhr){
+            alert("상태 : " + xhr.status);
+         },
+         dataType : 'json'
+      })
+   })
+   
+   //   lprod에서 하나를 선택하면 change이벤트 
+   //  option의 value값을 가져온다. -val()
+   $('#Lprod').on('change',function(){
+      const lprod_gu = $('#Lprod option:selected').val();
+      $.ajax({
+         url : 'prodName.jsp',
+         type : 'post',
+         data : {'gu' : lprod_gu},
+         error : function(xhr){
+            //응답 성공 햇는데 200오류면 json데이터 parsing하는때 오류가 나는거임
+            alert('상태 : ' + xhr.status); //200, 404, 500
+         },
+         success : function(res){
+            let code = "";
+            $.each(res,function(i,v){
+               code += "<option value='" + v.id + "'>" + v.name + "</option>";
+            })
+            $('#prod').html(code);
+            $('#prod').trigger('change');
+         },
+         dataType : 'json'
+         
+      })
+   })
+   
+   //prod를 change하면 해당 제품의 detail을 출력한다. 
+   //선택한 option의 value값을 가져온다. -val()
+   //queryForObject를 수행
+   
+   $('#prod').on('change',function(){
+      const prodId = $('option:selected',this).val();
+      console.log('#prod성공')
+      $.ajax({
+         url : 'prodDetail.jsp',
+         type:'post',
+         data : {"id" : prodId},
+         success : function(res){
+            let code ="";
+             code += '<table class="table table-striped">';
+             code += '<thead><tr><th>id</th>';
+             code += '<th>name</th></tr></thead><tbody>';
+             code += '<tr><td>id</td><td>' + res.id +'</td></tr>';
+             code += '<tr><td>name</td><td>' +res.name +'</td></tr>';
+             code += '<tr><td>lgu</td><td>' + res.lgu+'</td></tr>';
+             code += '<tr><td>buyer</td><td>' + res.buyer+'</td></tr>';
+             code += '<tr><td>cost</td><td>' + res.cost+'</td></tr>';
+             code += '<tr><td>price</td><td>' + res.price+'</td></tr>';
+             code += '<tr><td>sale</td><td>' + res.sale+'</td></tr>';
+             code += '<tr><td>outline</td><td>' + res.outline+'</td></tr>';
+            
+            /*         Mary
+                  Moe
+                    <td>mary@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            let code ="";
+
+            //code +=`<p> id : ${res.id}</p>`
+            //code +=`<p> name : ${res.name}</p>`
+            code +=`<p> lgu : ${res.lgu}</p>`
+            code +=`<p> buyer : ${res.buyer}</p>`
+            code +=`<p> cost : ${res.cost}</p>`
+            code +=`<p> price : ${res.price}</p>`
+            code +=`<p> sale : ${res.sale}</p>`
+            code +=`<p> outline : ${res.outline}</p>`
+            code +=`<p> detail : ${res.detail}</p>`
+            code +=`<p> insdate : ${res.insdate}</p>`
+            code +=`<p> properstock : ${res.properstock}</p>`
+            code +=`<p> size : ${res.size}</p>`
+            code +=`<p> delivery : ${res.delivery}</p>`
+            code +=`<p> unit : ${res.unit}</p>`
+            code +=`<p> qtyin : ${res.qtyin}</p>`
+            code +=`<p> qtysale : ${res.qtysale}</p>`
+ */
+            $('#detail').html(code);
+         },
+         error : function(xhr){
+            alert('상태 : ' + xhr.status);
+            
+         },
+         dataType : 'json'
+         
+      })
+   })
+})
+</script>
+</head>
+<body>
+   <br><br>
+   <input type="button" value="확인">
+   <br><br>
+   <div class="container">
+      
+      <form>
+         <div class="form-group">
+            <label for="Lprod">제품분류명</label>
+               <select class="form-control" id="Lprod">
+               </select> <br>
+            <label for="prod">상품명</label>
+               <select class="form-control" id="prod">
+               </select>
+         </div>
+      </form>
+   </div>
+   
+   <br><br>
+   
+   <div class="container" id="detail">
+      
+   </div>
+</body>
+</html>

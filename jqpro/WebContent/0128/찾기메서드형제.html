@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $("li.start").next().css({"color": "red", "border": "2px solid red"});
+  
+  
+  $('#next').on('click', function(){
+	  $('#d1 li.start').next().css({"color" : "orange" })
+  })
+  $('#nextAll').on('click', function(){
+	  $('#d1 li.start').nextAll('#d1 li:last').css({"color" : "yellow" })
+  })
+  $('#nextUntil').on('click', function(){
+	  $('#d1 li.start').nextUntil('#d1 li:last').css({"color" : "green" })
+  })
+  
+  $('#prev').on('click', function(){
+	  $('#d2 li.start').prev().css({"color" : "blue" })
+  })
+  $('#prevall').on('click', function(){
+	  $('#d2 li.start').prevAll('#d2 li:last').css({"color" : "pink" })
+  })
+  $('#prevuntil').on('click', function(){
+	  $('#d2 li.start').prevUntil('#d2 li:last').css({"color" : "purple" })
+  })
+  $('#sib').on('click', function(){
+	  $('#d3 li.start').siblings().css({"color" : "olive" })
+  })
+  $('#sib_select').on('click', function(){
+	  $('#d3 li.start').siblings('#d3 li.aa').css({"color" : "black" })
+  })
+});
+</script>
+</head>
+<body>
+
+   <input type="button" id="next" value="next">
+   <input type="button" id="nextAll" value="nextAll">
+   <input type="button" id="nextUntil" value="nextUntil">
+<div id = "d1" style="width:500px;" class="siblings">
+  <ul>ul (parent)
+    <li>li (sibling)</li>
+    <li>li (sibling)</li>
+    <li class="start">li (sibling with class name "start")</li>
+    <li>li (the next sibling of li with class name "start")</li>
+    <li>li (sibling)</li>
+  </ul>   
+</div>
+
+   <input type="button" id="prev" value="prev">
+   <input type="button" id="prevall" value="prevAll">
+   <input type="button" id="prevuntil" value="prevUntil">
+<div id = "d2" style="width:500px;" class="siblings">
+  <ul>ul (parent)
+    <li>li (sibling)</li>
+    <li>li (sibling)</li>
+    <li class="start">li (sibling with class name "start")</li>
+    <li>li (the next sibling of li with class name "start")</li>
+    <li>li (sibling)</li>
+  </ul>   
+</div>
+
+   <input type="button" id="sib" value="siblings">
+   <input type="button" id="sib_select" value="siblings">
+<div id = "d3" style="width:500px;" class="siblings">
+  <ul>ul (parent)
+    <li>li (sibling)</li>
+    <li class="aa">li (sibling)</li>
+    <li class="start">li (sibling with class name "start")</li>
+    <li>li (the next sibling of li with class name "start")</li>
+    <li class="aa">li (sibling)</li>
+  </ul>   
+</div>
+
+</body>
+</html>

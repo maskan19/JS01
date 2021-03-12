@@ -1,0 +1,274 @@
+@CHARSET "UTF-8";
+
+	section, aside{
+	
+	box-sizing : border-box;
+}
+
+header{
+	margin: 5px;
+	border-color: blue; 
+	height: 60px;
+	background: lightgray;
+	box-sizing : border-box;
+	min-with: 880px;
+}
+
+#d1{
+	height: 500px;
+	min-width: 1515px;
+}
+
+#left{
+	width: 10%;
+	float: left;
+	background: #5892EA;
+	padding: 0;
+	height: 530px;
+}
+
+#left ul{
+	background: #77A5EC;
+	font-size: 1.25em;
+	padding: 0;
+	margin-top: 50px;
+}
+
+#left ul li{
+	border-bottom:2px solid #6936D2;
+	display : inline-block;
+	width : 100%;
+	color: #131414;
+}
+
+#left ul li a{
+	text-decoration: none;
+}
+#centent{
+	width: 71%;
+	height : 530px;
+	float: left;
+}
+body{
+	overflow: hidden;
+	margin-top: -27px;
+}
+
+article{
+	height: 100%;
+}
+
+#right{
+	width: 17%;
+	float: right;
+	height: 530px;
+	background: lightgray;
+	padding: 30px;
+	margin-right: 30px; 
+}
+
+#right div .bu{
+	margin: 15px;
+}
+
+
+nav ul{
+		border-top : 2px dotted red;
+		border-bottom : 2px solid red;
+		border-left : none;
+		border-right : none;
+		list-style-type: none;
+		padding: 20px;
+}
+
+nav ul li{
+		display: inline;
+		padding: 10px;
+		margin: 20px;
+}
+
+nav ul li a{
+		letter-spacing: 15px; 
+		text-decoration: none;
+}
+
+section article iframe{
+	width: 100%;
+	height: 100%;
+	border: none;
+	min-with: 880px;
+}
+#shoop{
+	width: 3%;
+	height: 1%;
+}
+header span{
+	font-size : 1.5em;
+	vertical-align: top;
+}
+footer{
+	clear: both;
+	margin: 5px;
+	border-color: blue; 
+	height: 60px;
+	background: black;
+	box-sizing : border-box;
+}
+
+footer{
+	color : white;
+	font-size : 1.0em;
+	text-align: center;
+	padding: 17px;
+}
+
+
+/*		computer.html.css	*/
+
+#left2, #centent2, #right2{
+	border: 1px solid lightgray;
+	vertical-align: top;
+	width: calc((85% - 20px) / 3 );
+	height: 490px;
+	margin: 30px;
+	padding: 10px;
+	margin-right: 10px;
+	float: left;
+}
+#right2{
+	margin-right: 0; 
+}
+
+.c1{
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+#video{
+		vertical-align: top;
+}
+
+#move{
+	overflow: scroll;
+}
+
+#d2 #left3{
+	border: 1px solid lightgray;
+	width: 300px;
+	height: 300px;
+	margin: 30px;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+#d2 #centent3{
+	border: 1px solid lightgray;
+	width: 300px;
+	height: 300px;
+	margin: 30px;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+	}
+
+#left4, #centent4, #right4{
+	border: 1px solid lightgray;
+	vertical-align: top;
+	width: calc((85% - 20px) / 3 );
+	height: 490px;
+	margin: 30px;
+	padding: 10px;
+	margin-right: 10px;
+	float: left;}
+
+#left5, #centent5{
+	border: 1px solid lightgray;
+	width: calc((85% - 20px) / 3 );
+	height: 490px;
+	margin: 30px;
+	padding: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+.jug{
+	margin: 70px;
+	margin-top: 30px;
+}
+
+.fur{
+	margin: 70px;
+	margin-top: 30px;
+}
+
+
+#d8{
+	margin-left: -12px;
+}
+/* 회원가입 */
+#ht{
+	background: #F2F2F2;
+}
+
+#fo{
+	margin : 200px auto;
+	
+}
+
+#fi {
+		border : 1px solid gray;
+		margin: 30px;
+		width: 500px;
+		height: 500px;
+		background: #E6E6E6;
+	}
+	
+label{
+		display:  inline-block;
+		width: 120px;
+		height: 50px;
+}
+
+#bod{
+	margin-left: 400px;
+}
+
+#d3 .bu{
+	margin-left : 30px;
+	width: 200px; 
+	
+}
+
+/* 쇼핑카트 페이지 */
+#hts{
+	background: #F3E2A9;
+}
+
+caption{
+	margin: 10px;
+}
+
+#sh1{
+	margin: 200px auto;
+	border-collapse: collapse;
+	background: #F7D696;
+	text-align: center;	
+}
+
+#bb{
+	margin-left: 475px;
+	margin-top: -195px;
+}
+#bb2{
+	margin-left: 475px;
+	margin-top: -1px;
+}
+#sh1 tr .su{
+	width: 150px;
+}
+
+.sum{
+	width: 40px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+img{
+width : 50px;
+height : 50px;
+position:relative;
+}
+p{
+position: relative;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	$('img').css({'width' : '50px', 'height' : '50px' })
+	$('#btn1').on('click', function(){
+		/* $('img').animate({'left' : '100px', 'width' : '+=20px'}, 1000); //왼쪽으로 100px 1000ms의 속력으로 */
+		$('img').animate({'left' : '100px'},500)
+		.animate({'width' : '+=100px'}, 1000)
+		.delay(500)
+		.animate({'width' : '+=500px'}, 1000)
+	})
+	$('#btn2').on('click', function(){
+		a = setInterval(function(){
+			console.log(a);
+			$('p').animate({'left' : '+=200px'}, 500)
+			.animate({'font-size' : '+=10px'},500)
+			.queue(function(){
+				cr=Math.floor(Math.random()*256)
+				cg=Math.floor(Math.random()*256)
+				cb=Math.floor(Math.random()*256)
+				$(this).css('color', 'rgb(' + cr + ',' + cg + ',' + cb + ')');
+				$(this).dequeue();
+			})
+			.delay(500)
+			.animate({'left' : '-=200px'}, 500)
+			.animate({'font-size' : '-=10px'},500)
+			.queue(function(){
+				cr=Math.floor(Math.random()*256)
+				cg=Math.floor(Math.random()*256)
+				cb=Math.floor(Math.random()*256)
+				$(this).css('color', 'black');
+				$(this).dequeue();
+			})
+		}, 2000)//2초 뒤에 시작한다.
+
+		
+	})
+	
+	$('#btn3').on('click', function(){
+		clearInterval(a);
+	})
+	
+	
+	
+})
+
+</script>
+</head>
+<body>
+	<div class="box">
+		<br> <br> 
+		<input id="btn1" type="button" value="확인">
+		<div id="result1">
+		<img src="../images/Jellyfish.jpg">
+		</div>
+	</div>
+	<div class="box">
+		<br> <br> 
+		<input id="btn2" type="button" value="확인">
+		<input id="btn3" type="button" value="종료">
+		<div id="result1">
+		<p>~월 요 병~</p>
+		</div>
+	</div>
+</body>
+</html>

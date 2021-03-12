@@ -1,0 +1,17 @@
+commentBorder=\#AEAEAE | null | null | null | null | null
+commentText=\#AEAEAE | null | null | null | null | null
+declBoder=\#DFBE95 | null | null | null | null | null
+doctypeExternalId=\#DFBE95 | null | null | null | null | null
+doctypeExternalPubref=\#DFBE95 | null | null | null | null | null
+doctypeExtrenalSysref=\#DFBE95 | null | null | null | null | null
+doctypeName=\#DFBE95 | null | null | null | null | null
+eclipse.preferences.version=1
+entityReference=\#A38474 | null | null | null | null | null
+newFileTemplateName=New HTML File (5)
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="html_new" deleted\="false" description\="html 5" enabled\="true" id\="org.eclipse.wst.html.ui.templates.html5" name\="New HTML File (5)">&lt;\!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;meta charset\="UTF-8"&gt;\r\n&lt;title&gt;Insert title here&lt;/title&gt;\r\n&lt;link rel\="stylesheet" href\="../CSS/public.css"&gt;\r\n&lt;style&gt;\r\n&lt;/style&gt;\r\n&lt;script type\="text/javascript"&gt;\r\n&lt;/script&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n\t&lt;div class\="box"&gt;\r\n\t\t&lt;br&gt; &lt;br&gt; &lt;input type\="button" value\="\uD655\uC778" onclick\="proc1()"&gt;\r\n\t\t&lt;div id\="result1"&gt;&lt;/div&gt;\r\n\t&lt;/div&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n</template></templates>
+tagAttributeEquals=\#C0B6A8 | null | null | null | null | null
+tagAttributeName=\#B3B784 | null | null | null | null | null
+tagAttributeValue=\#CC9393 | null | null | null | null | null
+tagBorder=\#A19A83 | null | null | null | null | null
+tagName=\#A19A83 | null | null | null | null | null
+xmlContent=\#C0B6A8 | null | null | null | null | null

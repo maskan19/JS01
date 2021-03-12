@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<style>
+		table {
+			text-align: center;
+			width: 80%;
+			margin: auto;
+			border-collapse: collapse;
+		}
+
+		tr:FIRST-CHILD {
+			background: lightskyblue;
+		}
+
+		td {
+			height: auto;
+			padding: 10px;
+			text-align: center;
+		}
+
+		#names {
+			width: 200px;
+		}
+
+		#details {
+			width: 500px;
+		}
+
+		tr:hover {
+			background: #bbdefb;
+		}
+	</style>
+	<!-- request -->
+	<script>
+		$(function () {
+			
+	/////////ajax의 단축메뉴. 아래와 동일 $.getJSON(url, data, success)
+
+			/* $.getJSON(
+					'/lprod/LprodList',
+					function (res) {
+						code = `<table>`;
+						$.each(res, function (i, v) {
+							code += `<tr><td>${v.id}</td><td>
+							${v.gu}</td><td>${v.name}</td></tr>`;
+						})
+						code += `</table>`;
+						$("#result1").html(code);
+					}
+			); */
+			
+			
+			$.ajax({
+				url: '/lprod/LprodList',
+				type: 'get',
+				success: function (res) {
+					code = `<table>`;
+					$.each(res, function (i, v) {
+						code += `<tr><td>${v.id}</td><td>${v.gu}</td><td>${v.name}</td></tr>`;
+					})
+					code += `</table>`;
+					$("#result1").html(code);
+				},
+				error: function (xhr) {
+					alert("상태 : " + xhr.status);
+				},
+				dataType: 'json'
+			})
+		})
+	</script>
+</head>
+
+<body>
+
+	<div class="box">
+
+		<br>
+		<!-- <br> <input type="button" value="확인 "> -->
+
+		<div id="result1"></div>
+	</div>
+</body>
+
+</html>

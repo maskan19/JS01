@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+pre {
+	background-color: #B9DFFA;
+	font-size: 1.5em;
+	padding: 10px;
+	white-space: pre-wrap; /*공백은 유지하고 단어는 자름*/
+
+	/* 두자리씩 RGB,
+	em : 배율로 적용*/
+
+	/* 
+	pre : 공백은 그대로 줄바꿈 되지 않는다.
+	pre-wrap : 공백은 그대로 줄바꿈 된다.
+	nowrap : 공백이 여러개여도 하나만 표시하고 줄바꿈 되지 않는다. 
+	pre-line : 공백이 여러개여도 하나만 표시하고 줄바꿈 된다.
+	div : 공백은 그대로 줄바꿈 된다.
+	 */
+}
+
+div {
+	width: 95%;
+	height: auto;
+	margin: 10px;
+	padding: 10px;
+	border: 1px #81b9bf solid;
+	background : #b2ebf2;
+}
+
+.box input[type= button]{
+	
+	width :auto;
+	height : 30px;
+	background : #4db6ac;
+	color : white;
+	padding : 5px 10px;
+	border-radius : 10px;
+}
+
+.box div{
+	width : 80%;
+	height: auto;
+	padding : 10px;
+	border : 3px dotted #e5ffff;
+	
+}

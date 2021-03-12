@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/public.css">
+<style>
+</style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<div class="box">
+		<div>
+			<input type="button" value="버튼1">
+			<input type="button" value="버튼2">
+			<input type="button" value="버튼3">
+			<br>
+		</div>
+			<input type="button" id="clear" value="해제">
+		<div id="result1"></div>
+	</div>
+</body>
+</html>
